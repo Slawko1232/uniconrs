@@ -71,7 +71,14 @@
 
 	<script>
 		( function( doc ) {
-			// Start here...
+			var divs = doc.getElementsByClassName("amazing-wrapper");
+			let length = divs.length;
+			for (i = 0; i < length; i++) {
+				var strngs = divs[i].getElementsByTagName("strong");
+  				for(j = 0; j < strngs.length; j++){
+					  strngs[j].innerHTML = strngs[j].innerHTML + " &#129412";
+				  }
+			}
 		} )( document );
 	</script>
 </body>
